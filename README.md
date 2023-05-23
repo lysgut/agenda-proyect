@@ -1,2 +1,2 @@
-# agenda-proyect
-Lucas - Tomás - Dante
+# expressBase
+Estructura de trabajo personal con ExpressJs y MongoDB
