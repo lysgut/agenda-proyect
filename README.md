@@ -1,2 +1,2 @@
 # agenda-proyect
-con dante y williams
+Lucas - Tomás - Dante
