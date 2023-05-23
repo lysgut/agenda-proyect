@@ -11,9 +11,13 @@ mongoose.connect(DB, {
 useNewUrlParser: true,
 
 })
-.then((con) => {
+.then(() => {
 //console.log(con.connections);
 console.log("Conectado a la base de datos correctamente");
+})
+.catch(() => {
+console.log("no se pudo conectar a la base de datos")
+
 });
 
 const port = 3000;
