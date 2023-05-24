@@ -20,4 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Agrego un enrutador compatible
 app.use('/', myRouter);
+app.use("/no", myRouter);
 module.exports = app;
+
+

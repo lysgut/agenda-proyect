@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
 const DB = process.env.DATABASE.replace("<PASSWORD>", process.env.DATABASE_PASSWORD);
 
-
+mongoose.set('strictQuery', false);
 mongoose.connect(DB, {
 useNewUrlParser: true,
 
@@ -20,7 +20,8 @@ console.log("no se pudo conectar a la base de datos")
 
 });
 
-const port = 3000;
+
+const port = 1221;
 //Corremos el servidor en el puerto seleccionado
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port} correctamente`);
