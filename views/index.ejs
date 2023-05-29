@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.csss  ">
     <title>Document</title>
 </head>
 <body>
-        <h1><%=Eventos%></h1>
-        <h1>holas</h1>
+        <h1>holass</h1>
+        <button id="abrir-formulario" class="boton-agregar">+</button>
+
+        <div id="formulario" class="formulario">
+            <h2>Formulario</h2>
+            <form id="formulario-agregar">
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+    
+                <label for="prioridad">Prioridad:</label>
+                <input type="number" id="prioridad" name="prioridad" min="1" max="10" required>
+    
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+    
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color" required>
+    
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+        <script src="../server.js"></script>
+
 </body>
 </html>
