@@ -21,7 +21,10 @@ console.log("no se pudo conectar a la base de datos")
 });
 
 
+var Eventos;
+
 Evento.find({}, (err, eventos) => {
+    Eventos = eventos;
 if (err) {
 console.error("Error al obtener los eventos:", err);
 return;
@@ -29,11 +32,14 @@ return;
 else {console.log("Eventos:", eventos);
 }
 });
+module.exports = Eventos;
 
-const port = 1221
+const port = 1225
 app.listen(port, () => {
 console.log(`Servidor corriendo en el puerto ${port} correctamente`);
 });
+
+
 
 
 
