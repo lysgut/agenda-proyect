@@ -4,7 +4,7 @@
   "description": "Proyecto con estructura recomendada para comenzar nuevos proyectos con ExpressJs",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
     "dev": "node server.js",
     "start": "node server.js"
   },
@@ -25,6 +25,6 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.22"
   }
 }
