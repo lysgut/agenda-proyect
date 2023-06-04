@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="utf-8">
+    <title>Eventos</title>
+
+</head>
+<body>
+    <h1>Listado de Eventos</h1>
+    <ul>
+        <% eventos.forEach(function(evento) { %>
+            <li>
+                <!-- Información del evento -->
+                <h1>Asunto: <%= evento.asunto %></h1>
+                <p>Prioridad: <%= evento.prioridad %></p>
+                <p>Descripción: <%= evento.descript %></p>
+                <p>Fecha y Hora: <%= evento.fecha_hora %></p>
+        
+                <!-- Enlace para editar el evento -->
+                <a href="/eventos/<%= evento._id %>/editar">Editar</a>
+        
+                <!-- Formulario para eliminar el evento -->
+                <form action="/eventos/<%= evento._id %>/eliminar" method="POST">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+    <form action="/eventos" method="POST">
+        <h2>Nuevo Evento</h2>
+        <label for="asunto">Asunto:</label>
+        <input type="text" name="asunto" required>
+    
+        <label for="prioridad">Prioridad:</label>
+        <select name="prioridad" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <label for="descript">Descripción:</label>
+        <textarea name="descript" required></textarea>
+    
+        <label for="fecha_hora">Fecha y Hora:</label>
+        <input type="datetime-local" name="fecha_hora" required>
+    
+        <button>Crear Evento</button>
+    </form>
+</body>
+</html>

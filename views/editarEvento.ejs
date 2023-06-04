@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="utf-8">
+    <title>Editar Evento</title>
+    
+</head>
+<body>
+    <h2>Editar Evento</h2>
+
+    <form action="/eventos/<%= evento._id %>/editar" method="POST">
+        <label for="asunto">Asunto:</label>
+        <input type="text" name="asunto" value="<%= evento.asunto %>" required>
+
+        <label for="prioridad">Prioridad:</label>
+        <select name="prioridad" required>
+            <option value="1" <%= evento.prioridad === '1' ? 'selected' : '' %>>1</option>
+            <option value="2" <%= evento.prioridad === '2' ? 'selected' : '' %>>2</option>
+            <option value="3" <%= evento.prioridad === '3' ? 'selected' : '' %>>3</option>
+            <option value="4" <%= evento.prioridad === '4' ? 'selected' : '' %>>4</option>
+            <option value="5" <%= evento.prioridad === '5' ? 'selected' : '' %>>5</option>
+            <option value="6" <%= evento.prioridad === '6' ? 'selected' : '' %>>6</option>
+            <option value="7" <%= evento.prioridad === '7' ? 'selected' : '' %>>7</option>
+            <option value="8" <%= evento.prioridad === '8' ? 'selected' : '' %>>8</option>
+            <option value="9" <%= evento.prioridad === '9' ? 'selected' : '' %>>9</option>
+            <option value="10" <%= evento.prioridad === '10' ? 'selected' : '' %>>10</option>
+        </select>
+
+
+        <label for="descript">Descripción:</label>
+        <textarea name="descript" required><%= evento.descript %></textarea>
+        
+        <label for="fecha_hora">Fecha y Hora:</label>
+        <input type="datetime-local" name="fecha_hora" value="<%= evento.fecha_hora?.toISOString()?.slice(0, 16) %>" required>
+        
+        <button type="submit">Guardar cambios</button>
+    </form>
+</body>
+</html>

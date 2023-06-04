@@ -1,0 +1,30 @@
+{
+  "name": "expressbase",
+  "version": "1.0.0",
+  "description": "Proyecto con estructura recomendada para comenzar nuevos proyectos con ExpressJs",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "expressJs",
+    "base"
+  ],
+  "author": "Lic. García Héctor",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.17.3",
+    "moment": "^2.29.1",
+    "mongodb": "^5.5.0",
+    "mongoose": "^6.11.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

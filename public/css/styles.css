@@ -1,0 +1,41 @@
+body {
+    font-family: arial;
+    margin-left: 250px;
+    margin-top: 50px;
+    background-color: bisque;
+}
+label {
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 5px;
+}
+button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #0400ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}   
+a {
+    padding: 10px 22px;
+    background-color: #0400ff;
+    color: white;
+    border: none;
+    cursor: pointer;    
+}
+input{
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+select {
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+textarea {  
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
